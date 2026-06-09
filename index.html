@@ -1,11 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 2</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav header__nav">
+        <button class="nav__btn">
+          <img src="./img/menu-icon.svg" alt="" />
+        </button>
+        <a href="/"><img src="./img/logo.png" alt="" /></a>
+        <!-- <button class="nav__btn">
+                <img src="./img/menu-icon.svg" alt="">
+            </button>
+            <button class="nav__btn ">
+                <img src="./img/menu-icon.svg" alt="">
+            </button> -->
+        <button class="nav__btn">
+          <img src="./img/menu-icon.svg" alt="" />
+        </button>
+        <button class="nav__btn">
+          <img src="./img/menu-icon.svg" alt="" />
+        </button>
+      </nav>
+    </header>
+
+    <main class="page">
+      <h2 class="page__title">Услуги и сервисы</h2>
+      <div class="page__tabs tabs">
+        <button class="tabs__item">Ремонтируемые устройства</button>
+        <button class="tabs__item">Дополнительные услуги</button>
+        <button class="tabs__item">Цены на услуги</button>
+        <button class="tabs__item">Адреса сервисных центров</button>
+        <button class="tabs__item">Специальные цены</button>
+        <button class="tabs__item">Отзывы</button>
+      </div>
+      <p class="page__text">
+        Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+        Только у нас вы можете отремонтировать свой ноутбук Dell с официальной
+        гарантией производителя.
+        <!-- <span class="page__text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span> -->
+        <!-- <span class="page_text">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span> -->
+      </p>
+      <a href="#" class="page__expand"><img src="./img/expand" alt=""><span class="page__expand--title">Читать далее</span></a>
+      <img src="./img/cpspic.jpg" alt="" class="page-image">
+    </main>
+  </body>
 </html>
+`
