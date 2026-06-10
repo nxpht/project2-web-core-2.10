@@ -75,13 +75,13 @@ header{
 
 .page {
 }
-.page-container {
-  padding: 24px 16px;
-  }
+
 
 .page__title {
   color: #1b1c21;
   font-size: 28px;
+  padding-left: 20px;
+  padding-top: 24px;
   line-height: 40px;
   margin-bottom: 24px;
   position: relative;
@@ -93,16 +93,25 @@ header{
   height: 40px;
   background: #41f6d7;
   position: absolute;
-
-  left: -18px;
+  left: -2px;
   border-radius: 10px;
 }
 .tabs {
+  padding: 0 16px;
   display: flex;
   scrollbar-width: none;
   overflow-x: scroll;
   gap: 16px;
   margin-bottom: 24px;
+}
+.page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page__info {
+  padding: 0 16px;
 }
 
 .tabs__item {
@@ -146,8 +155,36 @@ header{
     margin-bottom: 16px;
     cursor: pointer;
 }
-
+.page__text--tablet, .page__text--desktop {
+  display: none;
+}
 .page__image {
   width: 100%;
   display: block;
+}
+
+
+@media (min-width: 768px) {
+
+  .page__content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .page__info {
+    padding: 0;
+    flex: 1;
+  }
+
+  .page__image {
+    border-radius: 6px;
+    flex: 1;
+  }
+  .page__text--tablet {
+    margin-top: 16px;
+    display: block;
+  }
 }
