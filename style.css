@@ -28,10 +28,16 @@ body {
   background: #f8f8f8;
 }
 
-header{ 
+header {
   background: #fff;
 }
 
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -86,7 +92,9 @@ header{
 .page {
 }
 
-
+.page__menu--desktop {
+  display: none;
+}
 .page__title {
   color: #1b1c21;
   font-size: 28px;
@@ -155,17 +163,18 @@ header{
 }
 
 .page__expand {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #1b1c21;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #1b1c21;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
 }
-.page__text--tablet, .page__text--desktop {
+.page__text--tablet,
+.page__text--desktop {
   display: none;
 }
 .page__image {
@@ -173,18 +182,14 @@ header{
   display: block;
 }
 
-
-
 @media (min-width: 768px) {
   .nav__group--tablet {
     display: flex;
     align-items: center;
     gap: 16px;
-     position: relative;
+    position: relative;
   }
-  
 
-  
   .nav__group--divider {
     display: block;
     width: 2px;
@@ -214,6 +219,54 @@ header{
     margin-top: 16px;
     display: block;
   }
+}
 
+@media (min-width: 1120px) {
+  header {
+    display: none;
+  }
+  .page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  .page__menu--desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-right: 24px;
+  }
+
+  .page__title {
+    padding-left: 30px;
+  }
+
+  .tabs {
+    padding: 0 24px;
+    flex-wrap: wrap;
+  }
+
+  .page__content {
+    padding: 0 24px;
+    gap: 24px;
+  }
+  .page__navlink {
+    display: flex;
+    align-items: center;
+    color: #1b1c21;
+    gap: 16px;
+  }
+  .page__navlink .nav__btn {
+    cursor: pointer;
+  }
+
+  .page__text--tablet {
+    display: none;
+  }
+  
+  .page__text--desktop {
+    display: block;
+    margin-top: 24px;
+  }
 }
